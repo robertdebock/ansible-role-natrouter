@@ -6,5 +6,20 @@
     - ansible-role-natrouter
 
   tasks:
-    - name: some test to prove the the role works
-      shell: echo "yes"
+    - name: read ip forwarding setting
+      command: cat /proc/sys/net/ipv4/ip_forward
+      register: ip_forward
+      changed_when: no
+
+    - name: evaluate ip forwarding setting
+      failed_when:
+        - ip_forward.stdout == "1"
+
+    - name: read routing rules
+      command: iptables -L -n -v
+      register: iptables
+      changed_when: no
+
+    - name: evaluate routing rules
+     failed_when:
+       - "nat" not in iptables.stdout
