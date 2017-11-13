@@ -1,2 +1,19 @@
 ---
 # tasks file for ansible-role-template
+- name: enable ip forwarding
+  sysctl:
+    name: net.ipv4.ip_forward
+    value: 1
+    state: present
+    reload: True
+
+- name: set routing rules
+  iptables:
+    table: nat
+    chain: POSTROUTING
+    out_interface: '{{ public_interface }}'
+    source: '{{ private_network }}'
+    destination: '{{ destination }}'
+    jump: MASQUERADE
+    protocol: '{{ protocol }}'
+    comment: Ansible NAT Masquerade

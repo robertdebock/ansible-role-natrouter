@@ -1,9 +1,8 @@
 galaxy_info:
   author: Robert de Bock
-  description: your description
+  description: Provides a NAT router
   license: Apache License, Version 2.0
   min_ansible_version: 2.0
-  min_ansible_container_version: 0.2.0
 
   platforms:
   - name: Alpine
@@ -31,6 +30,11 @@ galaxy_info:
     - fedora
     - rhel
     - ubuntu
+    - networking
+    - natrouter
+    - router
+    - nat
+    - masquerade
 
 dependencies:
   - robertdebock.bootstrap

@@ -11,7 +11,8 @@ Any pre-requisites that may not be covered by Ansible itself or the role should 
 Role Variables
 --------------
 
-None known.
+public_interface - The interface to go out over, defaults to eth0
+private_network - The CIDR notation of the network where traffic will come from, default to 192.168.1.0/24
 
 Dependencies
 ------------
@@ -24,7 +25,9 @@ Example Playbook
 ```
 - hosts: servers
   roles:
-    - robertdebock.ROLE
+    - role: robertdebock.natrouter
+      public_interface: enp0s3
+      private_network: 172.16.0.0/24
 ```
 
 License
