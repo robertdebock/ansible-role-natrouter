@@ -3,7 +3,7 @@
   remote_user: root
 
   roles:
-    - ansible-role-template
+    - ansible-role-natrouter
 
   tasks:
     - name: some test to prove the the role works

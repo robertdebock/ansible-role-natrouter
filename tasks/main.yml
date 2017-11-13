@@ -1,5 +1,5 @@
 ---
-# tasks file for ansible-role-template
+# tasks file for ansible-role-natrouter
 - name: enable ip forwarding
   sysctl:
     name: net.ipv4.ip_forward
