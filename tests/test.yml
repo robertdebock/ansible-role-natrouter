@@ -3,7 +3,7 @@
   remote_user: root
 
   roles:
-    - ansible-role-natrouter
+    - natrouter
 
   tasks:
     - name: read ip forwarding setting
