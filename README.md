@@ -7,6 +7,7 @@ Requirements
 ------------
 
 A machine with 2 (or more) interfaces.
+Access to a repository containing packages, likely on the internet.
 
 Role Variables
 --------------
@@ -24,6 +25,7 @@ Example Playbook
 
 ```
 - hosts: servers
+
   roles:
     - role: robertdebock.natrouter
       public_interface: enp0s3
