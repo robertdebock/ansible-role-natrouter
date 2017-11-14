@@ -14,12 +14,3 @@
     - name: evaluate ip forwarding setting
       failed_when:
         - ip_forward.stdout == "1"
-
-    - name: read routing rules
-      command: iptables -L -n -v
-      register: iptables
-      changed_when: no
-
-    - name: evaluate routing rules
-      failed_when:
-        - "nat" not in iptables.stdout
