@@ -6,11 +6,9 @@
     - natrouter
 
   tasks:
-    - name: read ip forwarding setting
+    - name: test ip forwarding setting
       command: cat /proc/sys/net/ipv4/ip_forward
       register: ip_forward
       changed_when: no
-
-    - name: evaluate ip forwarding setting
       failed_when:
         - ip_forward.stdout == "1"
