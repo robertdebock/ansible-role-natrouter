@@ -37,4 +37,4 @@ galaxy_info:
     - masquerade
 
 dependencies:
-  - robertdebock.bootstrap
+  - robertdebock.iptables

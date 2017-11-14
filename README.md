@@ -18,7 +18,7 @@ private_network - The CIDR notation of the network where traffic will come from,
 Dependencies
 ------------
 
-- robertdebock.bootstrap
+- robertdebock.iptables
 
 Example Playbook
 ----------------
