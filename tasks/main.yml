@@ -15,5 +15,7 @@
     source: '{{ private_network }}'
     destination: '{{ destination }}'
     jump: MASQUERADE
-    protocol: '{{ protocol }}'
+    protocol: '{{ item }}'
     comment: Ansible NAT Masquerade
+  with_items:
+    - "{{ protocols }}"

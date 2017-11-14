@@ -3,4 +3,6 @@
 public_interface: eth0
 private_network: 192.168.1.0/24
 destination: 0.0.0.0/0
-protocol: tcp
+protocols:
+- tcp
+- udp
