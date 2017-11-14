@@ -4,11 +4,3 @@
 
   roles:
     - natrouter
-
-  tasks:
-    - name: test ip forwarding setting
-      command: cat /proc/sys/net/ipv4/ip_forward
-      register: ip_forward
-      changed_when: no
-      failed_when:
-        - ip_forward.stdout == "1"
