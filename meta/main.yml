@@ -38,4 +38,4 @@ galaxy_info:
     - masquerade
 
 dependencies:
-  - robertdebock.iptables
+  - robertdebock.ansible-role-iptables

@@ -1,2 +1,3 @@
+---
 - name: robertdebock.ansible-role-iptables
   src: robertdebock.ansible-role-iptables
