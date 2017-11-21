@@ -1,2 +1,2 @@
-- name: robertdebock.iptables
-  src: robertdebock.iptables
+- name: robertdebock.ansible-role-iptables
+  src: robertdebock.ansible-role-iptables
