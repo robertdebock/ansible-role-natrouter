@@ -6,6 +6,8 @@
     value: 1
     state: present
     reload: True
+  when:
+    - ansible_virtualization_type != "docker"
 
 - name: set routing rules
   iptables:
@@ -19,3 +21,5 @@
     comment: Ansible NAT Masquerade
   with_items:
     - "{{ protocols }}"
+  when:
+    - ansible_virtualization_type != "docker"
