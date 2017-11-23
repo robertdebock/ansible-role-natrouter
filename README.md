@@ -1,5 +1,7 @@
-natrouter
+ansible-role-natrouter
 =========
+
+[![Build Status](https://travis-ci.org/robertdebock/ansible-role-natrouter.svg?branch=master)](https://travis-ci.org/robertdebock/ansible-role-natrouter)
 
 Provides an easy way to setup a nat router.
 
@@ -12,13 +14,13 @@ Access to a repository containing packages, likely on the internet.
 Role Variables
 --------------
 
-public_interface - The interface to go out over, defaults to eth0
-private_network - The CIDR notation of the network where traffic will come from, default to 192.168.1.0/24
+- public_interface - The interface to go out over, defaults to eth0
+- private_network - The CIDR notation of the network where traffic will come from, default to 192.168.1.0/24
 
 Dependencies
 ------------
 
-- robertdebock.iptables
+- robertdebock.ansible-role-iptables
 
 Example Playbook
 ----------------
@@ -27,7 +29,7 @@ Example Playbook
 - hosts: servers
 
   roles:
-    - role: robertdebock.natrouter
+    - role: robertdebock.ansible-role-natrouter
       public_interface: enp0s3
       private_network: 172.16.0.0/24
 ```
