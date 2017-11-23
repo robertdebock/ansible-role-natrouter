@@ -25,7 +25,7 @@ galaxy_info:
       versions:
         - artful
         - zesty
-        
+
   galaxy_tags:
     - alpine
     - debian
