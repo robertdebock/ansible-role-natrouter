@@ -22,6 +22,11 @@ Dependencies
 
 - robertdebock.ansible-role-iptables
 
+Download the dependencies by issueing this command:
+```
+ansible-galaxy install --role-file requirements.yml
+```
+
 Example Playbook
 ----------------
 
@@ -29,7 +34,7 @@ Example Playbook
 - hosts: servers
 
   roles:
-    - role: robertdebock.ansible-role-natrouter
+    - role: ansible-role-natrouter
       public_interface: enp0s3
       private_network: 172.16.0.0/24
 ```
