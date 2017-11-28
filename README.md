@@ -39,7 +39,7 @@ Example Playbook
       private_network: 172.16.0.0/24
 ```
 
-Install this role using `galaxy install robertdebock.ansible-role-nginx`.
+Install this role using `galaxy install robertdebock.ansible-role-natrouter`.
 
 License
 -------
