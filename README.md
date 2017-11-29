@@ -1,7 +1,7 @@
-ansible-role-natrouter
+natrouter
 =========
 
-[![Build Status](https://travis-ci.org/robertdebock/ansible-role-natrouter.svg?branch=master)](https://travis-ci.org/robertdebock/ansible-role-natrouter)
+[![Build Status](https://travis-ci.org/robertdebock.ansible-role-natrouter.svg?branch=master)](https://travis-ci.org/robertdebock/ansible-role-natrouter)
 
 Provides an easy way to setup a nat router.
 
@@ -20,7 +20,7 @@ Role Variables
 Dependencies
 ------------
 
-- robertdebock.ansible-role-iptables
+- robertdebock.iptables
 
 Download the dependencies by issuing this command:
 ```
@@ -34,12 +34,12 @@ Example Playbook
 - hosts: servers
 
   roles:
-    - role: robertdebock.ansible-role-natrouter
+    - role: robertdebock.natrouter
       public_interface: enp0s3
       private_network: 172.16.0.0/24
 ```
 
-Install this role using `galaxy install robertdebock.ansible-role-natrouter`.
+Install this role using `galaxy install robertdebock.natrouter`.
 
 License
 -------
