@@ -1,7 +1,7 @@
 natrouter
 =========
 
-[![Build Status](https://travis-ci.org/robertdebock.ansible-role-natrouter.svg?branch=master)](https://travis-ci.org/robertdebock/ansible-role-natrouter)
+[![Build Status](https://travis-ci.org/robertdebock/ansible-role-natrouter.svg?branch=master)](https://travis-ci.org/robertdebock/ansible-role-natrouter)
 
 Provides an easy way to setup a nat router.
 
