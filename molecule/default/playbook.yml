@@ -3,4 +3,4 @@
   hosts: all
 
   roles:
-    - role: natrouter
+    - role: ansible-role-natrouter
