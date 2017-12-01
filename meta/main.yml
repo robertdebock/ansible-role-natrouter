@@ -31,11 +31,11 @@ galaxy_info:
         - zesty
 
   galaxy_tags:
-    - alpine
-    - debian
-    - fedora
+    - Alpine
+    - Debian
+    - Fedora
     - rhel
-    - ubuntu
+    - Ubuntu
     - networking
     - natrouter
     - router
