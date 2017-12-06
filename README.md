@@ -14,8 +14,10 @@ Access to a repository containing packages, likely on the internet.
 Role Variables
 --------------
 
-- public_interface - The interface to go out over, defaults to eth0
-- private_network - The CIDR notation of the network where traffic will come from, default to 192.168.1.0/24
+- natrouter_public_interface - The interface to go out over, defaults to eth0.
+- natrouter_private_network - The CIDR notation of the network where traffic will come from, defaults to 192.168.1.0/24.
+- natrouter_destination - The destination to translate, defaults to 0.0.0.0/0.
+- natrouter_protocols: - The protcols to use, defaults to udp and tcp.
 
 Dependencies
 ------------

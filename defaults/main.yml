@@ -1,8 +1,8 @@
 ---
 # defaults file for natrouter
-public_interface: eth0
-private_network: 192.168.1.0/24
-destination: 0.0.0.0/0
-protocols:
+natrouter_public_interface: eth0
+natrouter_private_network: 192.168.1.0/24
+natrouter_destination: 0.0.0.0/0
+natrouter_protocols:
   - tcp
   - udp

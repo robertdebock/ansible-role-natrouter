@@ -13,13 +13,13 @@
   iptables:
     table: nat
     chain: POSTROUTING
-    out_interface: '{{ public_interface }}'
-    source: '{{ private_network }}'
-    destination: '{{ destination }}'
+    out_interface: '{{ natrouter_public_interface }}'
+    source: '{{ natrouter_private_network }}'
+    destination: '{{ natrouter_destination }}'
     jump: MASQUERADE
     protocol: '{{ item }}'
     comment: Ansible NAT Masquerade
   with_items:
-    - "{{ protocols }}"
+    - "{{ natrouter_protocols }}"
   when:
     - ansible_virtualization_type != "docker"
