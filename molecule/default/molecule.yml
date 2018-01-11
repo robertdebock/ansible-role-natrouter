@@ -8,10 +8,10 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: natrouter-alpine-3.5
-    image: alpine:3.5
   - name: natrouter-alpine-3.6
     image: alpine:3.6
+  - name: natrouter-alpine-3.7
+    image: alpine:3.7
   - name: natrouter-centos-6
     image: centos:6
   - name: natrouter-centos-7
