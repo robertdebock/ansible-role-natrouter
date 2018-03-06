@@ -43,5 +43,4 @@ galaxy_info:
     - nat
     - masquerade
 
-dependencies:
-  - robertdebock.iptables
+dependencies: []
