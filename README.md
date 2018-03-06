@@ -10,6 +10,7 @@ Requirements
 
 A machine with 2 (or more) interfaces.
 Access to a repository containing packages, likely on the internet.
+Have iptables installed. Hint: robertdebock.iptables
 
 Role Variables
 --------------
@@ -22,6 +23,9 @@ Role Variables
 Dependencies
 ------------
 
+These dependencies are not "hard", but rather "loose".
+
+- robertdebock.bootstrap
 - robertdebock.iptables
 
 Download the dependencies by issuing this command:
@@ -36,6 +40,8 @@ Example Playbook
 - hosts: servers
 
   roles:
+    - role: robertdebock.bootstrap
+    - role: robertdebock.iptables
     - role: robertdebock.natrouter
       public_interface: enp0s3
       private_network: 172.16.0.0/24
