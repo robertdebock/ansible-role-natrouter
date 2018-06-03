@@ -32,8 +32,8 @@ Dependencies
 
 These dependencies are not "hard", but rather "loose".
 
-- robertdebock.bootstrap
-- robertdebock.iptables
+- [robertdebock.bootstrap](https://travis-ci.org/robertdebock/ansible-role-bootstrap)
+- [robertdebock.iptables](https://travis-ci.org/robertdebock/ansible-role-iptables)
 
 Download the dependencies by issuing this command:
 ```
