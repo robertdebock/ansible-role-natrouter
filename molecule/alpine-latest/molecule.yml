@@ -8,14 +8,14 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: natrouter-alpine-3.7
-    image: alpine:3.7
+  - name: natrouter-alpine-latest
+    image: alpine:latest
 provisioner:
   name: ansible
   lint:
     name: ansible-lint
 scenario:
-  name: alpine-3.7
+  name: alpine-latest
 verifier:
   name: goss
   lint:

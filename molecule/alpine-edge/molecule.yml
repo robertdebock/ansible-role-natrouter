@@ -8,14 +8,14 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: natrouter-opensuse-42.3
-    image: opensuse:42.3
+  - name: natrouter-alpine-edge
+    image: alpine:edge
 provisioner:
   name: ansible
   lint:
     name: ansible-lint
 scenario:
-  name: opensuse-42.3
+  name: alpine-edge
 verifier:
   name: goss
   lint:

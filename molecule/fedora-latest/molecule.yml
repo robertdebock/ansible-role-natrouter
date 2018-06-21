@@ -8,14 +8,14 @@ driver:
 lint:
   name: yamllint
 platforms:
-  - name: natrouter-centos-7
-    image: centos:7
+  - name: natrouter-fedora-latest
+    image: fedora:latest
 provisioner:
   name: ansible
   lint:
     name: ansible-lint
 scenario:
-  name: centos-7
+  name: fedora-latest
 verifier:
   name: goss
   lint:
