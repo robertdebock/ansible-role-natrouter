@@ -1,5 +1,9 @@
 ---
 # tasks file for natrouter
+- name: install iptables
+  package:
+    name: iptables
+
 - name: enable ip forwarding
   sysctl:
     name: net.ipv4.ip_forward

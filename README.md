@@ -17,7 +17,6 @@ Requirements
 
 A machine with 2 (or more) interfaces.
 Access to a repository containing packages, likely on the internet.
-Have iptables installed. Hint: robertdebock.iptables
 
 Role Variables
 --------------
@@ -33,7 +32,6 @@ Dependencies
 These dependencies are not "hard", but rather "loose".
 
 - [robertdebock.bootstrap](https://travis-ci.org/robertdebock/ansible-role-bootstrap)
-- [robertdebock.iptables](https://travis-ci.org/robertdebock/ansible-role-iptables)
 
 Download the dependencies by issuing this command:
 ```
@@ -45,16 +43,15 @@ Compatibility
 
 This role has been tested against the following distributions and Ansible version:
 
-|distribution|ansible 2.3|ansible 2.4|ansible 2.5|
+|distribution|ansible 2.4|ansible 2.5|ansible 2.6|
 |------------|-----------|-----------|-----------|
-|alpine-latest|yes|yes|yes|
 |alpine-edge|yes|yes|yes|
+|alpine-latest|yes|yes|yes|
 |archlinux|yes|yes|yes|
 |centos-6|yes|yes|yes|
 |centos-latest|yes|yes|yes|
-|debian-stable|yes|yes|yes|
 |debian-latest|yes|yes|yes|
-|debian-wheezy|yes|yes|yes|
+|debian-stable|yes|yes|yes|
 |fedora-latest|yes|yes|yes|
 |fedora-rawhide|yes|yes|yes|
 |opensuse-leap|yes|yes|yes|
@@ -70,7 +67,6 @@ Example Playbook
 
   roles:
     - role: robertdebock.bootstrap
-    - role: robertdebock.iptables
     - role: robertdebock.natrouter
       public_interface: enp0s3
       private_network: 172.16.0.0/24
