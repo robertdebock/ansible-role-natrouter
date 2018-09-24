@@ -3,10 +3,12 @@
 - name: install iptables
   package:
     name: iptables
+    state: present
 
 - name: enable ip forwarding
   sysctl:
     name: net.ipv4.ip_forward
+    state: present
     value: 1
     reload: yes
   when:
@@ -15,6 +17,7 @@
 - name: set routing rules
   iptables:
     table: nat
+    state: present
     chain: POSTROUTING
     out_interface: '{{ natrouter_public_interface }}'
     source: '{{ natrouter_private_network }}'
