@@ -1,0 +1,50 @@
+---
+dependency:
+  name: galaxy
+  options:
+    role-file: requirements.yml
+driver:
+  name: docker
+lint:
+  name: yamllint
+platforms:
+  - name: natrouter-alpine-edge
+    image: alpine:edge
+    command: sh -c "while true ; do sleep 1 ; done"
+  - name: natrouter-alpine-latest
+    image: alpine:latest
+    command: sh -c "while true ; do sleep 1 ; done"
+  - name: natrouter-archlinux
+    image: base/archlinux
+  - name: natrouter-centos-6
+    image: centos:6
+  - name: natrouter-centos-latest
+    image: centos:latest
+  - name: natrouter-debian-latest
+    image: debian:latest
+  - name: natrouter-debian-stable
+    image: debian:stable
+  - name: natrouter-debian-unstable
+    image: debian:unstable
+  - name: natrouter-fedora-latest
+    image: fedora:latest
+  - name: natrouter-fedora-rawhide
+    image: fedora:rawhide
+  - name: natrouter-opensuse-leap
+    image: opensuse:leap
+  - name: natrouter-opensuse-tumbleweed
+    image: opensuse:tumbleweed
+  - name: natrouter-ubuntu-artful
+    image: ubuntu:artful
+  - name: natrouter-ubuntu-devel
+    image: ubuntu:devel
+provisioner:
+  name: ansible
+  lint:
+    name: ansible-lint
+scenario:
+  name: default
+verifier:
+  name: goss
+  lint:
+    name: yamllint

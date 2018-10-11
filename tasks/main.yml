@@ -3,7 +3,7 @@
 - name: install iptables
   package:
     name: iptables
-    state: present
+    state: "{{ iptables_package_state }}"
 
 - name: enable ip forwarding
   sysctl:

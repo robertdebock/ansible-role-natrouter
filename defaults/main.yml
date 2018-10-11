@@ -6,3 +6,6 @@ natrouter_destination: 0.0.0.0/0
 natrouter_protocols:
   - tcp
   - udp
+
+# To update all packages installed by this roles, set `natrouter_package_state` to `latest`.
+natrouter_package_state: present
