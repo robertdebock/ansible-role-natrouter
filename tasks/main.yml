@@ -19,11 +19,11 @@
     table: nat
     state: present
     chain: POSTROUTING
-    out_interface: '{{ natrouter_public_interface }}'
-    source: '{{ natrouter_private_network }}'
-    destination: '{{ natrouter_destination }}'
+    out_interface: "{{ natrouter_public_interface }}"
+    source: "{{ natrouter_private_network }}"
+    destination: "{{ natrouter_destination }}"
     jump: MASQUERADE
-    protocol: '{{ item }}'
+    protocol: "{{ item }}"
     comment: Ansible NAT Masquerade
   with_items:
     - "{{ natrouter_protocols }}"
