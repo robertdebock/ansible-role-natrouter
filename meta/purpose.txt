@@ -1,1 +1,0 @@
-Provides an easy way to setup a nat router.
