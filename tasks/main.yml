@@ -12,7 +12,7 @@
     value: 1
     reload: yes
   when:
-    - ansible_virtualization_type != "docker"
+    - ansible_virtualization_type != "docker" or natrouter_ignore_docker
 
 - name: set routing rules
   iptables:
@@ -28,4 +28,4 @@
   with_items:
     - "{{ natrouter_protocols }}"
   when:
-    - ansible_virtualization_type != "docker"
+    - ansible_virtualization_type != "docker" or natrouter_ignore_docker
