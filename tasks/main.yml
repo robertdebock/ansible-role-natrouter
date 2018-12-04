@@ -4,6 +4,9 @@
   package:
     name: iptables
     state: "{{ natrouter_package_state }}"
+  register: iptables_install_iptables
+  until: iptables_install_iptables
+  retries: 3
 
 - name: enable ip forwarding
   sysctl:
