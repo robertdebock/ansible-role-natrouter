@@ -34,8 +34,10 @@ platforms:
     image: opensuse:leap
   - name: natrouter-opensuse-tumbleweed
     image: opensuse:tumbleweed
-  - name: natrouter-ubuntu-artful
-    image: ubuntu:artful
+  - name: natrouter-ubuntu-latest
+    image: ubuntu:latest
+  - name: natrouter-ubuntu-rolling
+    image: ubuntu:rolling
   - name: natrouter-ubuntu-devel
     image: ubuntu:devel
   - name: natrouter-ubuntu-latest
