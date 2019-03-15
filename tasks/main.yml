@@ -3,7 +3,7 @@
 - name: install iptables
   package:
     name: iptables
-    state: "{{ natrouter_package_state }}"
+    state: present
   register: iptables_install_iptables
   until: iptables_install_iptables
   retries: 3
@@ -15,7 +15,7 @@
     value: 1
     reload: yes
   when:
-    - ansible_virtualization_type != "docker" or natrouter_ignore_docker
+    - ansible_virtualization_type != "docker"
 
 - name: set routing rules
   iptables:
@@ -31,4 +31,4 @@
   with_items:
     - "{{ natrouter_protocols }}"
   when:
-    - ansible_virtualization_type != "docker" or natrouter_ignore_docker
+    - ansible_virtualization_type != "docker"
