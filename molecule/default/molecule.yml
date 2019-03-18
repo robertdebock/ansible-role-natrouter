@@ -10,38 +10,56 @@ driver:
 platforms:
   - name: natrouter-alpine-edge
     image: alpine:edge
+    pre_build_image: yes
     command: sh -c "while true ; do sleep 1 ; done"
   - name: natrouter-alpine-latest
     image: alpine:latest
+    pre_build_image: yes
     command: sh -c "while true ; do sleep 1 ; done"
   - name: natrouter-archlinux
     image: archlinux/base
+    pre_build_image: yes
   - name: natrouter-centos-6
     image: centos:6
+    pre_build_image: yes
   - name: natrouter-centos-latest
     image: centos:latest
+    pre_build_image: yes
   - name: natrouter-debian-latest
     image: debian:latest
+    pre_build_image: yes
   - name: natrouter-debian-stable
     image: debian:stable
+    pre_build_image: yes
   - name: natrouter-debian-unstable
     image: debian:unstable
+    pre_build_image: yes
   - name: natrouter-fedora-latest
     image: fedora:latest
+    pre_build_image: yes
   - name: natrouter-fedora-rawhide
     image: fedora:rawhide
+    pre_build_image: yes
   - name: natrouter-opensuse-leap
     image: opensuse:leap
+    pre_build_image: yes
   - name: natrouter-ubuntu-latest
     image: ubuntu:latest
+    pre_build_image: yes
   - name: natrouter-ubuntu-rolling
     image: ubuntu:rolling
+    pre_build_image: yes
   - name: natrouter-ubuntu-devel
     image: ubuntu:devel
+    pre_build_image: yes
   - name: natrouter-ubuntu-latest
     image: ubuntu:latest
+    pre_build_image: yes
 provisioner:
   name: ansible
+  playbooks:
+    prepare: ../resources/prepare.yml
+    converge: ../resources/playbook.yml
   lint:
     name: ansible-lint
 scenario:
