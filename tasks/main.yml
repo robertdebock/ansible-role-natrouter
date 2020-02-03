@@ -8,15 +8,6 @@
   until: iptables_install_iptables is succeeded
   retries: 3
 
-- name: enable ip forwarding
-  sysctl:
-    name: net.ipv4.ip_forward
-    state: present
-    value: "1"
-    reload: yes
-  when:
-    - ansible_virtualization_type != "docker"
-
 - name: set routing rules
   iptables:
     table: nat
