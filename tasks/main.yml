@@ -19,7 +19,6 @@
     jump: MASQUERADE
     protocol: "{{ item }}"
     comment: Ansible NAT Masquerade
-  with_items:
-    - "{{ natrouter_protocols }}"
+  loop: "{{ natrouter_protocols }}"
   when:
     - ansible_virtualization_type != "docker"
