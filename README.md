@@ -35,8 +35,8 @@ The machine you are running this on, may need to be prepared, I use this playboo
     - role: robertdebock.bootstrap
     - role: robertdebock.sysctl
       sysctl_items:
-        name: net.ipv4.ip_forward
-        value: 1
+        - name: net.ipv4.ip_forward
+          value: 1
 ```
 
 After running this role, this playbook runs to verify that everything works, this may be a good example how you can use this role.
