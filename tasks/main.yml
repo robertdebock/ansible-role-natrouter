@@ -21,5 +21,4 @@
     comment: Ansible NAT Masquerade
   loop: "{{ natrouter_protocols }}"
   when:
-    - ansible_virtualization_type != "docker"
-    - ansible_virtualization_type != "container"
+    - ansible_connection != "docker"
