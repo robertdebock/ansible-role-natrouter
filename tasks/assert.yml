@@ -1,0 +1,33 @@
+---
+- name: test if natrouter_public_interface is set correctly
+  assert:
+    that:
+      - natrouter_public_interface is defined
+      - natrouter_public_interface | length > 0
+
+- name: test if natrouter_private_network is set correctly
+  assert:
+    that:
+      - natrouter_private_network is defined
+      - natrouter_private_network | length > 0
+
+- name: test if natrouter_destination is set correctly
+  assert:
+    that:
+      - natrouter_destination is defined
+      - natrouter_destination | length > 0
+
+- name: test if natrouter_protocols is set correctly
+  assert:
+    that:
+      - natrouter_protocols is defined
+      - natrouter_protocols | length > 0
+      - natrouter_protocols is iterable
+
+- name: test if item in natrouter_protocols is set correctly
+  assert:
+    that:
+      - item is defined
+      - item | length > 0
+      - item in ["dccp", "tcp", "sctp", "udp"]
+  loop: "{{ natrouter_protocols }}"
