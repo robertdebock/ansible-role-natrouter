@@ -30,4 +30,5 @@
       - item is defined
       - item | length > 0
       - item in ["dccp", "tcp", "sctp", "udp"]
+    quiet: yes
   loop: "{{ natrouter_protocols }}"
