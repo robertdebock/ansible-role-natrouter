@@ -7,9 +7,6 @@
   package:
     name: iptables
     state: present
-  register: iptables_install_iptables
-  until: iptables_install_iptables is succeeded
-  retries: 3
 
 - name: set routing rules
   iptables:
