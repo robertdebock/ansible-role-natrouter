@@ -33,7 +33,6 @@ galaxy_info:
         - xenial
 
   galaxy_tags:
-    - redhat
     - networking
     - natrouter
     - router
