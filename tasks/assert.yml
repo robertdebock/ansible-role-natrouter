@@ -1,4 +1,5 @@
 ---
+
 - name: test if natrouter_public_interface is set correctly
   assert:
     that:
