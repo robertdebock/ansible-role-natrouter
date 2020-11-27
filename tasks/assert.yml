@@ -4,18 +4,21 @@
   assert:
     that:
       - natrouter_public_interface is defined
+      - natrouter_public_interface is string
     quiet: yes
 
 - name: test if natrouter_private_network is set correctly
   assert:
     that:
       - natrouter_private_network is defined
+      - natrouter_private_network is string
     quiet: yes
 
 - name: test if natrouter_destination is set correctly
   assert:
     that:
       - natrouter_destination is defined
+      - natrouter_destination is string
     quiet: yes
 
 - name: test if natrouter_protocols is set correctly
@@ -29,6 +32,7 @@
   assert:
     that:
       - item is defined
+      - item is string
       - item in [ "dccp", "tcp", "sctp", "udp" ]
     quiet: yes
   loop: "{{ natrouter_protocols }}"
