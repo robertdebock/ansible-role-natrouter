@@ -2,9 +2,9 @@
 
 Install and configure a NAT router on your system.
 
-|Travis|GitHub|Quality|Downloads|Version|
-|------|------|-------|---------|-------|
-|[![travis](https://travis-ci.com/robertdebock/ansible-role-natrouter.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-natrouter)|[![github](https://github.com/robertdebock/ansible-role-natrouter/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-natrouter/actions)|[![quality](https://img.shields.io/ansible/quality/21915)](https://galaxy.ansible.com/robertdebock/natrouter)|[![downloads](https://img.shields.io/ansible/role/d/21915)](https://galaxy.ansible.com/robertdebock/natrouter)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-natrouter.svg)](https://github.com/robertdebock/ansible-role-natrouter/releases/)|
+|Travis|GitHub|GitLab|Quality|Downloads|Version|
+|------|------|------|-------|---------|-------|
+|[![travis](https://travis-ci.com/robertdebock/ansible-role-natrouter.svg?branch=master)](https://travis-ci.com/robertdebock/ansible-role-natrouter)|[![github](https://github.com/robertdebock/ansible-role-natrouter/workflows/Ansible%20Molecule/badge.svg)](https://github.com/robertdebock/ansible-role-natrouter/actions)|[![gitlab](https://gitlab.com/robertdebock/ansible-role-natrouter/badges/master/pipeline.svg)](https://gitlab.com/robertdebock/ansible-role-natrouter)|[![quality](https://img.shields.io/ansible/quality/21915)](https://galaxy.ansible.com/robertdebock/natrouter)|[![downloads](https://img.shields.io/ansible/role/d/21915)](https://galaxy.ansible.com/robertdebock/natrouter)|[![Version](https://img.shields.io/github/release/robertdebock/ansible-role-natrouter.svg)](https://github.com/robertdebock/ansible-role-natrouter/releases/)|
 
 ## [Example Playbook](#example-playbook)
 
