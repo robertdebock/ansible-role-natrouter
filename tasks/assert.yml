@@ -5,6 +5,7 @@
     that:
       - natrouter_public_interface is defined
       - natrouter_public_interface is string
+      - natrouter_public_interface is not none
     quiet: yes
 
 - name: assert | Test if natrouter_private_network is set correctly
@@ -12,6 +13,7 @@
     that:
       - natrouter_private_network is defined
       - natrouter_private_network is string
+      - natrouter_private_network is not none
     quiet: yes
 
 - name: assert | Test if natrouter_destination is set correctly
@@ -19,6 +21,7 @@
     that:
       - natrouter_destination is defined
       - natrouter_destination is string
+      - natrouter_destination is not none
     quiet: yes
 
 - name: assert | Test if natrouter_protocols is set correctly
