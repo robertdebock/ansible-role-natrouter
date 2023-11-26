@@ -1,4 +1,4 @@
-# Ansible role [natrouter](#natrouter)
+# [Ansible role natrouter](#natrouter)
 
 Install and configure a NAT router on your system.
 
